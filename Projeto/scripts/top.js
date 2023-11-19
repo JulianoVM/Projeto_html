@@ -1,14 +1,17 @@
-document.querySelector(".top").addEventListener("click", event =>
+function topo()
 {
-    event.preventDefault();
-
-    let eita = document.querySelector(document.querySelector(".top").getAttribute("href"));
-
-    if (eita)
+    document.querySelector(".top").addEventListener("click", event =>
     {
-        eita.scrollIntoView
-        ({
-            behavior: "smooth"
-        });
-    };
-});
+        event.preventDefault();
+    
+        let eita = document.querySelector(document.querySelector(".top").getAttribute("href"));
+    
+        if (eita)
+        {
+            eita.scrollIntoView(
+            {
+                behavior: "smooth"
+            });
+        };
+    });
+};

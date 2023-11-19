@@ -1,3 +1,15 @@
+<!--
+
+    Alterado algumas partes do css: bordas, sombreamento, cor de fundo e remoção do botão "top" em algumas páginas
+    além de uma pequena atualização no texto do grid, que estava diferente dos outros títulos das outras páginas
+
+    Adicionado JavaScript para o Scroll suave para os elemenetos, tanto nos links da Landing Page como no botão "top"
+    (me deparei com um bug que não sei como arrumar, que a -primeira- vez em que é apertado os botões ele não vai suave, mas depois sempre vai)
+
+    Nesse JavaScript, também foi adicionado uma pequena animação para quando se é clicado no elemento para fazer o Scroll
+    ele adiciona uma classe CSS e depois a remove
+
+-->
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -11,11 +23,11 @@
         <nav>
             <ul class="menu">
                 <img src="./images/Novo Projeto.png" alt="Logo" width="120"><br>
-                <a href="#login"><li class="linha_menu">Home</li></a>
-                <a href="#conteudo"><li class="linha_menu">Conteudo</li></a>
-                <a href="#grid"><li class="linha_menu">Grid</li></a>
-                <a href="#relatorio"><li class="linha_menu">Relatorios</li></a>
-                <a href="#form"><li class="linha_menu">Cadastro</li></a>
+                <a href="#login" onclick="navega()"><li class="linha_menu">Home</li></a>
+                <a href="#conteudo" onclick="navega()"><li class="linha_menu">Conteudo</li></a>
+                <a href="#grid" onclick="navega()"><li class="linha_menu">Grid</li></a>
+                <a href="#relatorio" onclick="navega()"><li class="linha_menu">Relatorios</li></a>
+                <a href="#form" onclick="navega()"><li class="linha_menu">Cadastro</li></a>
             </ul>
         </nav>
     </header>
@@ -43,7 +55,7 @@
         <br><br><hr><br><br>
 
         <section id="conteudo">
-            <p class="formata" id="p_conteudo">Lorem ipsum dolor sit amet, consectetur adipisicing elit. MUDEI DE IDEIA. Rerum iste hic molestiae quia ducimus repellat reiciendis facere! Sunt rem placeat pariatur iure nisi hic nulla cum. Explicabo minus itaque numquam?</p>
+            <p class="formata" id="p_conteudo">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum iste hic molestiae quia ducimus repellat reiciendis facere! Sunt rem placeat pariatur iure nisi hic nulla cum. Explicabo minus itaque numquam?</p>
 
             <div class="bot_gerais pos direita">
                 <a href="./conteudo.html">Ver conteúdo</a>
@@ -73,7 +85,7 @@
         <br><br><hr><br><br>
 
         <section id="form">
-            <p class="formata" id="p_form">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente temporibus incidunt esse sed odit et illo nemo, EU TO CORRINGANDO HAHAHAHAHHAHAHHAAHHAH placeat ex harum accusantium laudantium fuga magnam beatae, ducimus corporis cupiditate perferendis itaque?</p>
+            <p class="formata" id="p_form">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente temporibus incidunt esse sed odit et illo nemo, placeat ex harum accusantium laudantium fuga magnam beatae, ducimus corporis cupiditate perferendis itaque?</p>
 
             <div class="bot_gerais pos direita">
                 <a href="cadastro.html">Fazer cadastro</a>
@@ -87,7 +99,7 @@
     </footer>
 
     <div>
-        <a href="#top" class="top">Top</a>
+        <a href="#top" class="top" onclick="topo()">Top</a>
     </div>
 
     <script src="./scripts/scripts.js"></script>
